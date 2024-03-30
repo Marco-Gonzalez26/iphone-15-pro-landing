@@ -2,7 +2,7 @@ import { footerLinks } from '../constants'
 
 export const Footer = () => {
   return (
-    <footer className='py-5 sm:px-5'>
+    <footer className='p-5'>
       <div className='screen-max-width'>
         <div>
           <p className='font-semibold text-gray text-xs'>

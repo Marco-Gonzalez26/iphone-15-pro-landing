@@ -22,6 +22,9 @@ body {
 canvas {
   touch-action: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .screen-max-width {
   margin-inline-start: auto;
