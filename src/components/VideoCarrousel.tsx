@@ -102,7 +102,6 @@ export const VideoCarrousel = () => {
       }
       const animUpdate = () => {
         anim.progress(
-          //@ts-expect-error
           videoRef.current[videoId].currentTime /
             hightlightsSlides[videoId].videoDuration
         )

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import * as Sentry from '@sentry/react'
 import App from './App.tsx'
 import './index.css'
+import { Location, Action } from '@sentry/react/types/types'
 
 Sentry.init({
   dsn: 'https://bfc202ef3fcb624533ba8d14ccbedf0b@o4506947468328960.ingest.us.sentry.io/4506961488183296',
@@ -10,7 +11,19 @@ Sentry.init({
     Sentry.browserTracingIntegration(),
     Sentry.metrics.metricsAggregatorIntegration(),
     Sentry.reactRouterV6BrowserTracingIntegration({
-      useEffect: React.useEffect
+      useEffect: React.useEffect,
+      useLocation: function (): Location {
+        return;
+      },
+      useNavigationType: function (): Action {
+        return;
+      },
+      createRoutesFromChildren: function (children: JSX.Element[]) {
+        return;
+      },
+      matchRoutes: function (routes: any, location: Location, basename?: string): any[] {
+        return;
+      }
     }),
     Sentry.replayIntegration({
       maskAllText: false,
