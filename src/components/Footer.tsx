@@ -24,13 +24,13 @@ export const Footer = () => {
             Made with by ❤️ always.dev for{' '}
             <span className='text-blue'>educational purposes</span>
           </p>
-          <div className='flex'>
+          <div className='flex flex-wrap'>
             {footerLinks.map((link, idx) => {
               return (
                 <p className='font-semibold text-gray text-xs'>
-                  {link}{' '}
+                  {link}
                   {idx !== footerLinks.length - 1 ? (
-                    <span className='mx-2'>|</span>
+                    <span className='mx-[4px]'>|</span>
                   ) : null}
                 </p>
               )
